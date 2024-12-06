@@ -38,7 +38,7 @@ Finaly restart apache to enable the site:
 
 Create a service file:
 
-`vi /etc/systemd/system/pathcheck.service`
+`vi /etc/systemd/system/nodepathtest.service`
 
 Paste in the following:
 
@@ -62,9 +62,9 @@ WantedBy=multi-user.target
 
 `sudo systemctl daemon-reload`
 
-`sudo systemctl enable pathcheck.service`
+`sudo systemctl enable nodepathtest.service`
 
-`sudo systemctl start pathcheck.service`
+`sudo systemctl start nodepathtest.service`
 
 ## Enable Client Script auto-download and execute 
 
@@ -85,3 +85,17 @@ EOF
 Navigate to your eve server on port :50000 i.e. http://192.168.1.10:50000
 
 Start each of the docker:gui nodes in your eve-ng lab
+
+Go back to the web site and start tests
+
+# Troublehsooting
+
+If you need to restart the server:
+
+`sudo systemctl restart nodepathtest.service`
+
+You can also always run the server interactivly to check logs:
+
+`python3 /opt/nodepathtest/server/server.py`
+
+To re-start clients, simply power them off, wipe them, and start them again.
