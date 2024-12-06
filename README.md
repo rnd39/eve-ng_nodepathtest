@@ -1,21 +1,12 @@
-# ReadME
+# Node connecitivty testing tool for use in EVE-NG with the eve-gui-server:latest 
 
-## Create Directorys
+This script provides a simple way to deploy client/drone nodes in your eve-ng lab, and then ping and traceroute every other node thats added in a full mesh.
 
-`mkdir /opt/nodepathtest`
+Inspired from https://ring.nlnog.net/ ring ping.
 
-`mkdir /opt/nodepathtest/client`
+## Clone repo
 
-`mkdir /opt/nodepathtest/server`
-
-
-## Copy the scripts into each directory
-
-`wget {client.py-ScriptLocation} /opt/nodepathtest/client/client.py`
-
-`wget {client_install.sh-ScriptLocation} /opt/nodepathtest/client/client_install.sh`
-
-`wget {server.py-ScriptLocation} /opt/nodepathtest/server/server.py`
+`git clone https://github.com/rnd39/eve-ng_nodepathtest.git /opt/nodepathtest/`
 
 ## Create a new apache virtual server
 
@@ -77,7 +68,7 @@ WantedBy=multi-user.target
 
 ## Enable Client Script auto-download and execute 
 
-Inside the startup config of each of your docker:gui images, ammend the IP, gateway and DNS as required and execute the client script:
+Create some eve-gui-server:latest docker images, and inside the startup config of each, ammend the IP, gateway and DNS as required and execute the client script:
 
 ```
 # Set ip address and Default route
