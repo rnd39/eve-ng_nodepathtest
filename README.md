@@ -1,6 +1,8 @@
-# Node connecitivty testing tool for use in EVE-NG with the eve-gui-server:latest 
+## Intro
 
-This script provides a simple way to deploy client/drone nodes in your eve-ng lab, and then ping and traceroute every other node thats added in a full mesh.
+This is an EVE-NG Meshed Node connectivity testing tool for use with the eve-gui-server docker image.
+
+This script provides a simple way to deploy client/drone nodes in your eve-ng lab, useing the eve-ng host as a server to present the testing. The clients ping and traceroute every other node thats added in a full mesh.
 
 Inspired from https://ring.nlnog.net/ ring ping.
 
@@ -88,7 +90,7 @@ Start each of the docker:gui nodes in your eve-ng lab
 
 Go back to the web site and start tests
 
-# Troublehsooting
+## Troublehsooting
 
 If you need to restart the server:
 
@@ -99,3 +101,4 @@ You can also always run the server interactivly to check logs:
 `python3 /opt/nodepathtest/server/server.py`
 
 To re-start clients, simply power them off, wipe them, and start them again.
+
