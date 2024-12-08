@@ -8,11 +8,13 @@ Inspired from https://ring.nlnog.net/ ring ping.
 
 ## Clone repo
 
+SSH to your eve-ng server, and clone the repo:
+
 `git clone https://github.com/rnd39/eve-ng_nodepathtest.git /opt/nodepathtest/`
 
 ## Create a new apache virtual server
 
-Create the .conf file with the required settings, the client directory to serve the client script on HTTP port 81.
+Create a new apache virtual server .conf file with the required settings, note the client directory and port listener for HTTP port 81.
 
 `vi /etc/apache2/sites-available/nodepathtest.conf`
 
@@ -88,7 +90,11 @@ Navigate to your eve server on port :50000 i.e. http://192.168.1.10:50000
 
 Start each of the docker:gui nodes in your eve-ng lab
 
-Go back to the web site and start tests
+Go back to the web site and start and stop the tests
+
+check the detailed information for a specific endpoint
+
+You can then also download the test results in static HTML and json format
 
 ## Troublehsooting
 
